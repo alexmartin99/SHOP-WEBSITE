@@ -1,0 +1,2443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="STAR BATTERY - Premium Automotive & Inverter Battery Dealer with Same Day Delivery">
+    <meta name="keywords" content="batteries, automotive, inverter, UPS, Mumbai, Thane">
+    <title>STAR BATTERY - WHERE SERVICE DELIVERS</title>
+    <style>
+        :root {
+            --primary: #d50000;
+            --secondary: #ffffff;
+            --background: #f7f7f7;
+            --accent: #333333;
+            --light-gray: #f0f0f0;
+            --border-gray: #e0e0e0;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --success: #4CAF50;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-primary);
+            background: var(--background);
+            line-height: 1.6;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            position: sticky;
+            top: 0;
+            background: var(--secondary);
+            box-shadow: var(--shadow);
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            margin-top: -0.3rem;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 0.7rem 1rem;
+            border: 2px solid var(--border-gray);
+            border-radius: 25px;
+            width: 250px;
+            transition: all 0.3s;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(213, 0, 0, 0.1);
+        }
+
+        .search-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--secondary);
+            border: 1px solid var(--border-gray);
+            border-top: none;
+            border-radius: 0 0 25px 25px;
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .search-dropdown.active {
+            display: block;
+        }
+
+        .search-result {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-gray);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .search-result:hover {
+            background: var(--light-gray);
+        }
+
+        /* STICKY CART BUTTON */
+        .sticky-cart {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            box-shadow: var(--shadow-lg);
+            z-index: 99;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .sticky-cart:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 45px rgba(213, 0, 0, 0.3);
+        }
+
+        .cart-count {
+            background: var(--secondary);
+            color: var(--primary);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #ff4444 100%);
+            color: var(--secondary);
+            padding: 6rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="1200" height="600" fill="none"/><rect width="1200" height="600" fill="url(%23grid)" /></svg>');
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            animation: slideInUp 0.8s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-tagline {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-item::before {
+            content: '✓ ';
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* BRANDS SECTION */
+        .section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--accent);
+            font-weight: 900;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .brand-card {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .brand-logo {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .brand-card h3 {
+            font-size: 1.3rem;
+            color: var(--accent);
+        }
+
+        /* FILTERS */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.7rem 1.5rem;
+            border: 2px solid var(--border-gray);
+            background: var(--secondary);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: var(--secondary);
+            border-color: var(--primary);
+        }
+
+        /* PRODUCTS GRID */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: var(--secondary);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: var(--light-gray);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-brand {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--secondary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            width: fit-content;
+        }
+
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .product-category {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-compatibility {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .price-section {
+            background: var(--light-gray);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .price-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .price-line:last-child {
+            margin-bottom: 0;
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.1rem;
+            border-top: 1px solid var(--border-gray);
+            padding-top: 0.5rem;
+        }
+
+        .stock-status {
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .stock-in {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .stock-out {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn-add-cart {
+            flex: 1;
+            background: var(--primary);
+            color: var(--secondary);
+            border: none;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .btn-add-cart:hover {
+            background: #b30000;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            flex: 1;
+            background: #25d366;
+            color: var(--secondary);
+            border: none;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1fa855;
+            transform: translateY(-2px);
+        }
+
+        /* SERVICES SECTION */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, var(--primary), #ff4444);
+            color: var(--secondary);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* TRUST SECTION */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .trust-item {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+        }
+
+        .trust-item::before {
+            content: '✔';
+            display: block;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        /* CONTACT SECTION */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-box {
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary);
+        }
+
+        .contact-box h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .contact-link:hover {
+            color: var(--primary);
+        }
+
+        /* GOOGLE MAP */
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--light-gray), var(--border-gray));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--accent);
+            color: var(--secondary);
+            padding: 2rem 1rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-tagline {
+            color: #999;
+            margin-bottom: 1rem;
+        }
+
+        .footer-copyright {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* MODAL */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--secondary);
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            padding: 2rem;
+            background: var(--primary);
+            color: var(--secondary);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+
+        .modal-body {
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(213, 0, 0, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .required::after {
+            content: ' *';
+            color: var(--primary);
+        }
+
+        /* PRODUCT DETAILS MODAL */
+        .product-details-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .product-detail-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            background: var(--light-gray);
+        }
+
+        .product-detail-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .detail-value {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* CART PAGE */
+        .cart-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .cart-items {
+            background: var(--secondary);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr 100px;
+            gap: 1rem;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-gray);
+            margin-bottom: 1rem;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item-image {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: var(--light-gray);
+        }
+
+        .cart-item-details h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item-details p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: 1px solid var(--border-gray);
+            border-radius: 5px;
+            width: fit-content;
+        }
+
+        .quantity-control button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem 0.75rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .quantity-control span {
+            padding: 0 0.75rem;
+            font-weight: 600;
+        }
+
+        .cart-remove {
+            background: #ffebee;
+            color: #c62828;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .cart-remove:hover {
+            background: #ffcdd2;
+        }
+
+        .cart-summary {
+            background: var(--secondary);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .summary-row.total {
+            font-size: 1.3rem;
+            color: var(--primary);
+            border-top: 2px solid var(--border-gray);
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-cart-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* SUCCESS POPUP */
+        .success-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--secondary);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .success-popup.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .success-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+        }
+
+        .success-popup h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .success-popup p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-tagline {
+                font-size: 1rem;
+            }
+
+            .search-box input {
+                width: 150px;
+                font-size: 0.9rem;
+            }
+
+            .header-actions {
+                flex-direction: column;
+                width: 100%;
+                gap: 0.5rem;
+            }
+
+            .product-details-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-section {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-summary {
+                position: static;
+            }
+
+            .cart-item {
+                grid-template-columns: 80px 1fr 80px;
+            }
+
+            .sticky-cart {
+                bottom: 1rem;
+                right: 1rem;
+                padding: 0.8rem 1rem;
+            }
+
+            .modal-content {
+                width: 95%;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .hero-features {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .search-box input {
+                width: 100%;
+            }
+
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-item {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div>
+                <div class="logo">⚡ STAR BATTERY</div>
+                <div class="tagline">WHERE SERVICE DELIVERS</div>
+            </div>
+            <div class="header-actions">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search batteries, brands..."
+                        aria-label="Search products"
+                    >
+                    <div class="search-dropdown" id="searchDropdown"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- STICKY CART BUTTON -->
+    <div class="sticky-cart" id="stickyCart" aria-label="View shopping cart">
+        <span>🛒 Cart</span>
+        <span class="cart-count" id="cartCount">0</span>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>STAR BATTERY</h1>
+                <div class="hero-tagline">WHERE SERVICE DELIVERS</div>
+                
+                <div class="hero-features">
+                    <div class="feature-item">Doorstep Battery Delivery</div>
+                    <div class="feature-item">Battery Installation</div>
+                    <div class="feature-item">Old Battery Exchange</div>
+                    <div class="feature-item">Warranty Support</div>
+                    <div class="feature-item">Same Day Service</div>
+                </div>
+
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('products')">Shop Batteries</button>
+                    <a href="https://wa.me/917045902196?text=Hello%20STAR%20BATTERY%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services" 
+                       class="btn btn-secondary" style="text-decoration: none; display: inline-block;">WhatsApp Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BRANDS SECTION -->
+        <section class="section" id="brands">
+            <h2 class="section-title">Premium Brands We Offer</h2>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <div class="brand-logo">⚡</div>
+                    <h3>EXIDE</h3>
+                    <p>Premium automotive batteries</p>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">🔋</div>
+                    <h3>AMARON</h3>
+                    <p>High-performance batteries</p>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">⚙️</div>
+                    <h3>POWERZONE</h3>
+                    <p>Reliable energy solutions</p>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">🔌</div>
+                    <h3>SF BATTERIES</h3>
+                    <p>Quality and durability</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS SECTION -->
+        <section class="section" id="products">
+            <h2 class="section-title">Our Battery Collection</h2>
+            
+            <div class="filters" id="filtersContainer"></div>
+            
+            <div class="products-grid" id="productsGrid"></div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="section" id="services">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🚚</div>
+                    <h3>Doorstep Delivery</h3>
+                    <p>Fast and reliable battery delivery to your doorstep</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Installation</h3>
+                    <p>Professional battery installation service</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">♻️</div>
+                    <h3>Battery Exchange</h3>
+                    <p>Best exchange value for old batteries</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✓</div>
+                    <h3>Warranty Support</h3>
+                    <p>Full manufacturer warranty coverage</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3>Jump Start Service</h3>
+                    <p>Emergency jump start assistance</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📞</div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock emergency support</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRUST SECTION -->
+        <section class="section" id="trust">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <h3>Genuine Batteries</h3>
+                    <p>100% authentic products from authorized dealers</p>
+                </div>
+                <div class="trust-item">
+                    <h3>Manufacturer Warranty</h3>
+                    <p>Complete manufacturer warranty on all products</p>
+                </div>
+                <div class="trust-item">
+                    <h3>Expert Installation</h3>
+                    <p>Professional technicians for proper installation</p>
+                </div>
+                <div class="trust-item">
+                    <h3>Same Day Delivery</h3>
+                    <p>Quick delivery across Mumbai and nearby areas</p>
+                </div>
+                <div class="trust-item">
+                    <h3>Best Exchange Value</h3>
+                    <p>Premium scrap exchange rates for old batteries</p>
+                </div>
+                <div class="trust-item">
+                    <h3>Trusted Local Dealer</h3>
+                    <p>Serving the community for years with excellence</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section" id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                    📍 Get Directions: Serving Kurla, Andheri, Ghatkopar, Sakinaka, Powai, Mumbra, Shil, Navi Mumbai, Thane, Kalyan
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-box">
+                    <h3>📞 Phone</h3>
+                    <div class="contact-info">
+                        <a href="tel:+917045902196" class="contact-link">+91 7045902196</a>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Call for battery inquiries</p>
+                    </div>
+                </div>
+
+                <div class="contact-box">
+                    <h3>💬 WhatsApp</h3>
+                    <div class="contact-info">
+                        <a href="https://wa.me/917045902196" target="_blank" class="contact-link">+91 7045902196</a>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Quick responses on WhatsApp</p>
+                    </div>
+                </div>
+
+                <div class="contact-box">
+                    <h3>📧 Email</h3>
+                    <div class="contact-info">
+                        <a href="mailto:starbattery66@gmail.com" class="contact-link">starbattery66@gmail.com</a>
+                        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.5rem;">Send us your inquiries</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PRODUCT DETAILS MODAL -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Product Details</h2>
+                <button class="modal-close" onclick="closeProductModal()" aria-label="Close modal">✕</button>
+            </div>
+            <div class="modal-body" id="productModalBody"></div>
+        </div>
+    </div>
+
+    <!-- CHECKOUT MODAL -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Checkout</h2>
+                <button class="modal-close" onclick="closeCheckoutModal()" aria-label="Close modal">✕</button>
+            </div>
+            <div class="modal-body">
+                <form id="checkoutForm" onsubmit="submitCheckout(event)">
+                    <div id="cartItemsSummary"></div>
+
+                    <hr style="margin: 1.5rem 0; border: none; border-top: 1px solid var(--border-gray);">
+
+                    <div class="form-group">
+                        <label class="required">Customer Name</label>
+                        <input type="text" id="customerName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Phone Number</label>
+                        <input type="tel" id="phoneNumber" pattern="[0-9]{10}" placeholder="10 digit number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Delivery Address</label>
+                        <textarea id="deliveryAddress" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Area</label>
+                        <select id="area" required>
+                            <option value="">Select Area</option>
+                            <option value="Kurla">Kurla</option>
+                            <option value="Andheri">Andheri</option>
+                            <option value="Ghatkopar">Ghatkopar</option>
+                            <option value="Sakinaka">Sakinaka</option>
+                            <option value="Powai">Powai</option>
+                            <option value="Mumbra">Mumbra</option>
+                            <option value="Shil">Shil</option>
+                            <option value="Navi Mumbai">Navi Mumbai</option>
+                            <option value="Thane">Thane</option>
+                            <option value="Kalyan">Kalyan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Vehicle Number</label>
+                        <input type="text" id="vehicleNumber" placeholder="e.g., MH01AB1234" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Vehicle Model</label>
+                        <input type="text" id="vehicleModel" placeholder="e.g., Activa 5G, Fortuner" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="required">Battery Required For</label>
+                        <input type="text" id="batteryFor" placeholder="e.g., Bike, Car" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Special Instructions</label>
+                        <textarea id="specialInstructions" placeholder="Any special delivery instructions..."></textarea>
+                    </div>
+
+                    <input type="hidden" id="orderSummaryField">
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- CART VIEW MODAL -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <button class="modal-close" onclick="closeCartModal()" aria-label="Close modal">✕</button>
+            </div>
+            <div class="modal-body">
+                <div id="cartContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUCCESS POPUP -->
+    <div class="success-popup" id="successPopup">
+        <div class="success-icon">✓</div>
+        <h2>Order Placed Successfully!</h2>
+        <p>STAR BATTERY will contact you shortly on WhatsApp to confirm availability and delivery.</p>
+        <button class="btn btn-primary" onclick="closeSuccessPopup()" style="margin-top: 1rem;">Close</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">⚡ STAR BATTERY</div>
+            <div class="footer-tagline">WHERE SERVICE DELIVERS</div>
+            <div class="footer-copyright">© 2026 STAR BATTERY. All rights reserved. | Automotive & Inverter Battery Dealer</div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // PRODUCTS DATABASE
+        const productsData = [
+            // BIKE BATTERIES
+            {
+                id: 1,
+                name: "AMARON TZ4",
+                price: 1050,
+                scrapValue: 150,
+                category: "BIKE BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "ACTIVA, DIO",
+                image: "https://via.placeholder.com/300x250?text=AMARON+TZ4",
+                description: "High performance maintenance free battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 2,
+                name: "EXIDE BIKE BATTERY",
+                price: 900,
+                scrapValue: 120,
+                category: "BIKE BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "PULSAR, BAJAJ",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+BIKE",
+                description: "Reliable and durable bike battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 3,
+                name: "SF BATTERIES BIKE",
+                price: 850,
+                scrapValue: 100,
+                category: "BIKE BATTERIES",
+                brand: "SF BATTERIES",
+                vehicleCompatibility: "SPLENDOR, DISCOVER",
+                image: "https://via.placeholder.com/300x250?text=SF+BIKE",
+                description: "Affordable quality battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 4,
+                name: "POWERZONE BIKE",
+                price: 950,
+                scrapValue: 130,
+                category: "BIKE BATTERIES",
+                brand: "POWERZONE",
+                vehicleCompatibility: "BULLET, ENFIELD",
+                image: "https://via.placeholder.com/300x250?text=POWERZONE+BIKE",
+                description: "Long lasting performance",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 5,
+                name: "AMARON ACTIVA SERIES",
+                price: 1100,
+                scrapValue: 160,
+                category: "BIKE BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "ACTIVA 6G, ACTIVA 5G",
+                image: "https://via.placeholder.com/300x250?text=AMARON+ACTIVA",
+                description: "Special series for Activa scooters",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 6,
+                name: "EXIDE BIKE COMPACT",
+                price: 850,
+                scrapValue: 110,
+                category: "BIKE BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "CT100, PASSION",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+COMPACT",
+                description: "Compact design battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 7,
+                name: "SF BATTERIES HEAVY DUTY",
+                price: 1000,
+                scrapValue: 140,
+                category: "BIKE BATTERIES",
+                brand: "SF BATTERIES",
+                vehicleCompatibility: "CB SHINE, SHINE",
+                image: "https://via.placeholder.com/300x250?text=SF+HEAVY+DUTY",
+                description: "Heavy duty bike battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 8,
+                name: "POWERZONE BIKE PLUS",
+                price: 1050,
+                scrapValue: 150,
+                category: "BIKE BATTERIES",
+                brand: "POWERZONE",
+                vehicleCompatibility: "SPLENDOR PRO, GLAM",
+                image: "https://via.placeholder.com/300x250?text=POWERZONE+PLUS",
+                description: "Extended battery life",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 9,
+                name: "AMARON BIKE PREMIUM",
+                price: 1200,
+                scrapValue: 180,
+                category: "BIKE BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "HORNET, APACHE",
+                image: "https://via.placeholder.com/300x250?text=AMARON+PREMIUM",
+                description: "Premium performance bike battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 10,
+                name: "EXIDE BIKE PRO",
+                price: 1150,
+                scrapValue: 170,
+                category: "BIKE BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "JAWA, YEZDI",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+PRO",
+                description: "Professional grade bike battery",
+                stockStatus: "In Stock"
+            },
+
+            // CAR BATTERIES
+            {
+                id: 11,
+                name: "AMARON CAR BATTERY PRO",
+                price: 4500,
+                scrapValue: 800,
+                category: "CAR BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "MARUTI SWIFT, ALTO",
+                image: "https://via.placeholder.com/300x250?text=AMARON+CAR",
+                description: "Heavy duty car battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 12,
+                name: "EXIDE CAR BATTERY",
+                price: 3800,
+                scrapValue: 650,
+                category: "CAR BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "HONDA CITY, ACCORD",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+CAR",
+                description: "Reliable car battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 13,
+                name: "SF BATTERIES CAR",
+                price: 3500,
+                scrapValue: 600,
+                category: "CAR BATTERIES",
+                brand: "SF BATTERIES",
+                vehicleCompatibility: "TATA NEXON, NEXON EV",
+                image: "https://via.placeholder.com/300x250?text=SF+CAR",
+                description: "Budget friendly car battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 14,
+                name: "POWERZONE CAR BATTERY",
+                price: 4000,
+                scrapValue: 700,
+                category: "CAR BATTERIES",
+                brand: "POWERZONE",
+                vehicleCompatibility: "HYUNDAI I20, CRETA",
+                image: "https://via.placeholder.com/300x250?text=POWERZONE+CAR",
+                description: "High performance car battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 15,
+                name: "AMARON PREMIUM CAR",
+                price: 5200,
+                scrapValue: 900,
+                category: "CAR BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "TOYOTA FORTUNER",
+                image: "https://via.placeholder.com/300x250?text=AMARON+PREMIUM",
+                description: "Premium automotive battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 16,
+                name: "EXIDE CAR PROFESSIONAL",
+                price: 4200,
+                scrapValue: 750,
+                category: "CAR BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "MAHINDRA XUV500, XUV300",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+PROF",
+                description: "Professional grade car battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 17,
+                name: "SF BATTERIES CAR PRO",
+                price: 4100,
+                scrapValue: 700,
+                category: "CAR BATTERIES",
+                brand: "SF BATTERIES",
+                vehicleCompatibility: "SKODA RAPID, VW POLO",
+                image: "https://via.placeholder.com/300x250?text=SF+PRO",
+                description: "Pro series car battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 18,
+                name: "POWERZONE CAR PLUS",
+                price: 4400,
+                scrapValue: 750,
+                category: "CAR BATTERIES",
+                brand: "POWERZONE",
+                vehicleCompatibility: "MARUTI SUZUKI ERTIGA",
+                image: "https://via.placeholder.com/300x250?text=POWERZONE+PLUS",
+                description: "Extended life car battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 19,
+                name: "AMARON CAR HEAVY",
+                price: 5800,
+                scrapValue: 1000,
+                category: "CAR BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "MAHINDRA BOLERO, THAR",
+                image: "https://via.placeholder.com/300x250?text=AMARON+HEAVY",
+                description: "Heavy duty automotive",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 20,
+                name: "EXIDE CAR EXTREME",
+                price: 4700,
+                scrapValue: 850,
+                category: "CAR BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "RENAULT DUSTER, KWID",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+EXTREME",
+                description: "Extreme performance battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 21,
+                name: "SF BATTERIES COMMERCIAL",
+                price: 4300,
+                scrapValue: 750,
+                category: "CAR BATTERIES",
+                brand: "SF BATTERIES",
+                vehicleCompatibility: "TATA INDICA, TIGOR",
+                image: "https://via.placeholder.com/300x250?text=SF+COMMERCIAL",
+                description: "Commercial grade battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 22,
+                name: "POWERZONE CAR ELITE",
+                price: 4800,
+                scrapValue: 850,
+                category: "CAR BATTERIES",
+                brand: "POWERZONE",
+                vehicleCompatibility: "NISSAN SUNNY, DATSUN",
+                image: "https://via.placeholder.com/300x250?text=POWERZONE+ELITE",
+                description: "Elite car battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 23,
+                name: "AMARON CAR STANDARD",
+                price: 4100,
+                scrapValue: 700,
+                category: "CAR BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "CHEVROLET ENJOY, BEAT",
+                image: "https://via.placeholder.com/300x250?text=AMARON+STANDARD",
+                description: "Standard car battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 24,
+                name: "EXIDE CAR STANDARD",
+                price: 3900,
+                scrapValue: 650,
+                category: "CAR BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "FORD ECOSPORT, FIGO",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+STANDARD",
+                description: "Standard reliable battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 25,
+                name: "SF BATTERIES LUXURY",
+                price: 4600,
+                scrapValue: 800,
+                category: "CAR BATTERIES",
+                brand: "SF BATTERIES",
+                vehicleCompatibility: "BMW, AUDI, MERCEDES",
+                image: "https://via.placeholder.com/300x250?text=SF+LUXURY",
+                description: "Luxury car battery",
+                stockStatus: "Out of Stock"
+            },
+
+            // INVERTER BATTERIES
+            {
+                id: 26,
+                name: "AMARON INVERTER 150AH",
+                price: 8500,
+                scrapValue: 1500,
+                category: "INVERTER BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "Home, Office",
+                image: "https://via.placeholder.com/300x250?text=AMARON+INVERTER",
+                description: "High capacity inverter battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 27,
+                name: "EXIDE INVERTER 120AH",
+                price: 7200,
+                scrapValue: 1200,
+                category: "INVERTER BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "Home, Office",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+INVERTER",
+                description: "Reliable inverter battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 28,
+                name: "SF INVERTER 100AH",
+                price: 6000,
+                scrapValue: 1000,
+                category: "INVERTER BATTERIES",
+                brand: "SF BATTERIES",
+                vehicleCompatibility: "Home",
+                image: "https://via.placeholder.com/300x250?text=SF+INVERTER",
+                description: "Budget inverter battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 29,
+                name: "POWERZONE INVERTER 130AH",
+                price: 7800,
+                scrapValue: 1300,
+                category: "INVERTER BATTERIES",
+                brand: "POWERZONE",
+                vehicleCompatibility: "Home, Office",
+                image: "https://via.placeholder.com/300x250?text=POWERZONE+INV",
+                description: "Long lasting inverter battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 30,
+                name: "AMARON INVERTER 200AH",
+                price: 11000,
+                scrapValue: 2000,
+                category: "INVERTER BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "Large Home, Commercial",
+                image: "https://via.placeholder.com/300x250?text=AMARON+200AH",
+                description: "Extra large capacity inverter",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 31,
+                name: "EXIDE INVERTER PRIME",
+                price: 8000,
+                scrapValue: 1400,
+                category: "INVERTER BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "Home, Office",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+PRIME",
+                description: "Prime series inverter",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 32,
+                name: "SF INVERTER PRO",
+                price: 6500,
+                scrapValue: 1100,
+                category: "INVERTER BATTERIES",
+                brand: "SF BATTERIES",
+                vehicleCompatibility: "Home",
+                image: "https://via.placeholder.com/300x250?text=SF+PRO",
+                description: "Professional inverter battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 33,
+                name: "POWERZONE INVERTER PRO",
+                price: 8200,
+                scrapValue: 1450,
+                category: "INVERTER BATTERIES",
+                brand: "POWERZONE",
+                vehicleCompatibility: "Home, Office",
+                image: "https://via.placeholder.com/300x250?text=POWERZONE+PRO",
+                description: "Professional grade inverter",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 34,
+                name: "AMARON SOLAR INVERTER",
+                price: 12000,
+                scrapValue: 2200,
+                category: "INVERTER BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "Solar Home",
+                image: "https://via.placeholder.com/300x250?text=AMARON+SOLAR",
+                description: "Solar compatible inverter battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 35,
+                name: "EXIDE INVERTER COMMERCIAL",
+                price: 9500,
+                scrapValue: 1700,
+                category: "INVERTER BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "Commercial",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+COMM",
+                description: "Commercial inverter battery",
+                stockStatus: "Out of Stock"
+            },
+
+            // UPS BATTERIES
+            {
+                id: 36,
+                name: "AMARON UPS 1000VA",
+                price: 2500,
+                scrapValue: 400,
+                category: "UPS BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "Office, Server",
+                image: "https://via.placeholder.com/300x250?text=AMARON+UPS",
+                description: "1000VA UPS battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 37,
+                name: "EXIDE UPS 1500VA",
+                price: 3200,
+                scrapValue: 500,
+                category: "UPS BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "Office, Server",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+UPS",
+                description: "1500VA UPS battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 38,
+                name: "SF UPS 2000VA",
+                price: 3800,
+                scrapValue: 600,
+                category: "UPS BATTERIES",
+                brand: "SF BATTERIES",
+                vehicleCompatibility: "Server, Data Center",
+                image: "https://via.placeholder.com/300x250?text=SF+UPS",
+                description: "2000VA UPS battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 39,
+                name: "POWERZONE UPS 1200VA",
+                price: 2800,
+                scrapValue: 450,
+                category: "UPS BATTERIES",
+                brand: "POWERZONE",
+                vehicleCompatibility: "Office, Desktop",
+                image: "https://via.placeholder.com/300x250?text=POWERZONE+UPS",
+                description: "1200VA UPS battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 40,
+                name: "AMARON UPS 2000VA",
+                price: 4200,
+                scrapValue: 700,
+                category: "UPS BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "Server Room",
+                image: "https://via.placeholder.com/300x250?text=AMARON+2000",
+                description: "High capacity UPS battery",
+                stockStatus: "In Stock"
+            },
+
+            // HEAVY VEHICLE BATTERIES
+            {
+                id: 41,
+                name: "EXIDE TRUCK BATTERY",
+                price: 6500,
+                scrapValue: 1200,
+                category: "HEAVY VEHICLE BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "TRUCK, BUS",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+TRUCK",
+                description: "Heavy truck battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 42,
+                name: "AMARON HEAVY VEHICLE",
+                price: 7200,
+                scrapValue: 1400,
+                category: "HEAVY VEHICLE BATTERIES",
+                brand: "AMARON",
+                vehicleCompatibility: "TATA TRUCK, ASHOK",
+                image: "https://via.placeholder.com/300x250?text=AMARON+HEAVY",
+                description: "Professional truck battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 43,
+                name: "SF COMMERCIAL BATTERY",
+                price: 5800,
+                scrapValue: 1000,
+                category: "HEAVY VEHICLE BATTERIES",
+                brand: "SF BATTERIES",
+                vehicleCompatibility: "COMMERCIAL VEHICLE",
+                image: "https://via.placeholder.com/300x250?text=SF+COMMERCIAL",
+                description: "Commercial vehicle battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 44,
+                name: "POWERZONE TRUCK BATTERY",
+                price: 6800,
+                scrapValue: 1300,
+                category: "HEAVY VEHICLE BATTERIES",
+                brand: "POWERZONE",
+                vehicleCompatibility: "HEAVY TRUCK",
+                image: "https://via.placeholder.com/300x250?text=POWERZONE+TRUCK",
+                description: "High performance truck battery",
+                stockStatus: "In Stock"
+            },
+            {
+                id: 45,
+                name: "EXIDE INDUSTRIAL BATTERY",
+                price: 8000,
+                scrapValue: 1500,
+                category: "HEAVY VEHICLE BATTERIES",
+                brand: "EXIDE",
+                vehicleCompatibility: "INDUSTRIAL, HEAVY TRUCK",
+                image: "https://via.placeholder.com/300x250?text=EXIDE+INDUSTRIAL",
+                description: "Industrial grade battery",
+                stockStatus: "In Stock"
+            }
+        ];
+
+        // STATE
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let currentFilter = 'ALL';
+        let searchTerm = '';
+
+        // UTILITY FUNCTIONS
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section?.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function formatCurrency(amount) {
+            return '₹' + amount.toLocaleString('en-IN');
+        }
+
+        function getFilteredProducts() {
+            return productsData.filter(product => {
+                const matchesFilter = currentFilter === 'ALL' || product.category === currentFilter || product.brand === currentFilter;
+                const matchesSearch = searchTerm === '' || 
+                    product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    product.brand.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    product.vehicleCompatibility.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    product.category.toLowerCase().includes(searchTerm.toLowerCase());
+                return matchesFilter && matchesSearch;
+            });
+        }
+
+        // FILTER FUNCTIONS
+        function initializeFilters() {
+            const container = document.getElementById('filtersContainer');
+            const categories = ['ALL', ...new Set(productsData.map(p => p.category)), ...new Set(productsData.map(p => p.brand))];
+            
+            container.innerHTML = categories.map(cat => `
+                <button class="filter-btn ${cat === 'ALL' ? 'active' : ''}" onclick="setFilter('${cat}')">
+                    ${cat}
+                </button>
+            `).join('');
+        }
+
+        function setFilter(filter) {
+            currentFilter = filter;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.trim() === filter);
+            });
+            renderProducts();
+        }
+
+        // PRODUCT RENDERING
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            const filtered = getFilteredProducts();
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-secondary);">No products found</div>';
+                return;
+            }
+
+            grid.innerHTML = filtered.map(product => `
+                <div class="product-card" onclick="viewProductDetails(${product.id})">
+                    <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
+                    <div class="product-info">
+                        <div class="product-brand">${product.brand}</div>
+                        <div class="product-name">${product.name}</div>
+                        <div class="product-category">${product.category}</div>
+                        <div class="product-compatibility">For: ${product.vehicleCompatibility}</div>
+                        
+                        <div class="price-section">
+                            <div class="price-line">
+                                <span>MRP</span>
+                                <span>${formatCurrency(product.price)}</span>
+                            </div>
+                            <div class="price-line">
+                                <span>Scrap</span>
+                                <span>${formatCurrency(product.scrapValue)}</span>
+                            </div>
+                            <div class="price-line">
+                                You Pay: ${formatCurrency(product.price - product.scrapValue)}
+                            </div>
+                        </div>
+
+                        <div class="stock-status ${product.stockStatus === 'In Stock' ? 'stock-in' : 'stock-out'}">
+                            ${product.stockStatus}
+                        </div>
+
+                        <div class="product-actions">
+                            <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart(${product.id})">ADD TO CART</button>
+                            <button class="btn-whatsapp" onclick="event.stopPropagation(); sendWhatsAppEnquiry(${product.id})">WHATSAPP</button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // PRODUCT DETAILS
+        function viewProductDetails(productId) {
+            const product = productsData.find(p => p.id === productId);
+            if (!product) return;
+
+            const body = document.getElementById('productModalBody');
+            body.innerHTML = `
+                <div class="product-details-content">
+                    <img src="${product.image}" alt="${product.name}" class="product-detail-image" loading="lazy">
+                    <div class="product-detail-info">
+                        <h3>${product.name}</h3>
+                        <div class="detail-row">
+                            <span class="detail-label">Brand</span>
+                            <span class="detail-value">${product.brand}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Category</span>
+                            <span class="detail-value">${product.category}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Compatible With</span>
+                            <span class="detail-value">${product.vehicleCompatibility}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">MRP</span>
+                            <span class="detail-value">${formatCurrency(product.price)}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Scrap Value</span>
+                            <span class="detail-value">${formatCurrency(product.scrapValue)}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">You Pay</span>
+                            <span class="detail-value" style="font-size: 1.3rem;">${formatCurrency(product.price - product.scrapValue)}</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Stock</span>
+                            <span class="detail-value">${product.stockStatus}</span>
+                        </div>
+                        <p style="margin-top: 1rem; color: var(--text-secondary);">${product.description}</p>
+                        <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                            <button class="btn btn-primary" onclick="addToCart(${product.id}); closeProductModal();">Add to Cart</button>
+                            <a href="https://wa.me/917045902196?text=Hi%20STAR%20BATTERY%2C%20I%20am%20interested%20in%20${encodeURIComponent(product.name)}" 
+                               target="_blank" class="btn btn-secondary" style="flex: 1; text-align: center; text-decoration: none;">WhatsApp Enquiry</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('productModal').classList.add('active');
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.remove('active');
+        }
+
+        // CART FUNCTIONS
+        function addToCart(productId) {
+            const product = productsData.find(p => p.id === productId);
+            if (!product) return;
+
+            const existingItem = cart.find(item => item.id === productId);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+
+            saveCart();
+            updateCartUI();
+            showNotification(`${product.name} added to cart!`);
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            saveCart();
+            updateCartUI();
+        }
+
+        function updateQuantity(productId, quantity) {
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity = Math.max(1, quantity);
+                saveCart();
+                updateCartUI();
+            }
+        }
+
+        function clearCart() {
+            cart = [];
+            saveCart();
+            updateCartUI();
+        }
+
+        function saveCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function updateCartUI() {
+            const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').textContent = count;
+        }
+
+        // SEARCH FUNCTIONS
+        const debouncedSearch = debounce(() => {
+            const input = document.getElementById('searchInput');
+            searchTerm = input.value;
+            
+            const dropdown = document.getElementById('searchDropdown');
+            if (searchTerm.length < 2) {
+                dropdown.classList.remove('active');
+                renderProducts();
+                return;
+            }
+
+            const results = getFilteredProducts();
+            dropdown.innerHTML = results.slice(0, 8).map(product => `
+                <div class="search-result" onclick="selectSearchResult('${product.name}')">
+                    <strong>${product.name}</strong><br>
+                    <span style="font-size: 0.85rem; color: var(--text-secondary);">${product.brand} - ${product.category}</span>
+                </div>
+            `).join('');
+            
+            if (results.length > 0) {
+                dropdown.classList.add('active');
+            }
+            
+            renderProducts();
+        }, 300);
+
+        document.getElementById('searchInput').addEventListener('input', debouncedSearch);
+
+        function selectSearchResult(productName) {
+            document.getElementById('searchInput').value = productName;
+            document.getElementById('searchDropdown').classList.remove('active');
+            searchTerm = productName;
+            renderProducts();
+        }
+
+        // CART MODAL
+        function openCartModal() {
+            const content = document.getElementById('cartContent');
+            
+            if (cart.length === 0) {
+                content.innerHTML = `
+                    <div class="empty-cart">
+                        <div class="empty-cart-icon">🛒</div>
+                        <h3>Your cart is empty</h3>
+                        <p>Add some batteries to get started!</p>
+                    </div>
+                `;
+                document.getElementById('cartModal').classList.add('active');
+                return;
+            }
+
+            let html = '<div class="cart-items">';
+            let subtotal = 0;
+            let totalScrap = 0;
+
+            cart.forEach(item => {
+                const itemPrice = (item.price - item.scrapValue) * item.quantity;
+                subtotal += itemPrice;
+                totalScrap += item.scrapValue * item.quantity;
+
+                html += `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}" class="cart-item-image" loading="lazy">
+                        <div class="cart-item-details">
+                            <h4>${item.name}</h4>
+                            <p>${item.brand}</p>
+                            <p>₹${(item.price - item.scrapValue)} each</p>
+                        </div>
+                        <div class="quantity-control">
+                            <button onclick="updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
+                            <span>${item.quantity}</span>
+                            <button onclick="updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
+                        </div>
+                        <button class="cart-remove" onclick="removeFromCart(${item.id})">Remove</button>
+                    </div>
+                `;
+            });
+
+            html += '</div>';
+
+            html += `
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span>${formatCurrency(subtotal)}</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Total Savings:</span>
+                        <span style="color: var(--success);">${formatCurrency(totalScrap)}</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Grand Total:</span>
+                        <span>${formatCurrency(subtotal)}</span>
+                    </div>
+                    <button class="btn btn-primary" onclick="openCheckoutModal()" style="width: 100%; margin-bottom: 0.5rem;">Proceed to Checkout</button>
+                    <button class="btn btn-secondary" onclick="clearCart(); closeCartModal();" style="width: 100%; margin-bottom: 0.5rem;">Clear Cart</button>
+                    <button class="btn btn-secondary" onclick="closeCartModal()" style="width: 100%;">Continue Shopping</button>
+                </div>
+            `;
+
+            content.innerHTML = html;
+            document.getElementById('cartModal').classList.add('active');
+        }
+
+        function closeCartModal() {
+            document.getElementById('cartModal').classList.remove('active');
+        }
+
+        document.getElementById('stickyCart').addEventListener('click', openCartModal);
+
+        // CHECKOUT FUNCTIONS
+        function generateOrderSummary() {
+            let summary = '# ================================\nSTAR BATTERY ORDER\n\nCustomer Details\n\n';
+            summary += `Name: ${document.getElementById('customerName').value}\n`;
+            summary += `Phone: ${document.getElementById('phoneNumber').value}\n`;
+            summary += `Address: ${document.getElementById('deliveryAddress').value}\n`;
+            summary += `Area: ${document.getElementById('area').value}\n`;
+            summary += `Vehicle Number: ${document.getElementById('vehicleNumber').value}\n`;
+            summary += `Vehicle Model: ${document.getElementById('vehicleModel').value}\n`;
+            summary += `\n---\nItems:\n\n`;
+
+            let total = 0;
+            let totalScrap = 0;
+
+            cart.forEach(item => {
+                const itemTotal = (item.price - item.scrapValue) * item.quantity;
+                total += itemTotal;
+                totalScrap += item.scrapValue * item.quantity;
+                summary += `${item.name}\nQty: ${item.quantity}\nPrice: ₹${item.price - item.scrapValue}\n\n`;
+            });
+
+            summary += `---\nTotal Savings: ₹${totalScrap}\n\nGrand Total: ₹${total}\n\n================================`;
+            return summary;
+        }
+
+        function openCheckoutModal() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+
+            let html = '<h3>Order Summary</h3>';
+            let total = 0;
+            let totalScrap = 0;
+
+            cart.forEach(item => {
+                const itemTotal = (item.price - item.scrapValue) * item.quantity;
+                total += itemTotal;
+                totalScrap += item.scrapValue * item.quantity;
+                html += `<div style="margin-bottom: 0.5rem;"><strong>${item.name}</strong> x${item.quantity} = ₹${itemTotal}</div>`;
+            });
+
+            html += `<div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-gray);"><strong>Total Savings: ₹${totalScrap}</strong></div>`;
+            html += `<div style="font-size: 1.2rem; color: var(--primary); font-weight: bold; margin-top: 0.5rem;">Grand Total: ₹${total}</div>`;
+
+            document.getElementById('cartItemsSummary').innerHTML = html;
+            document.getElementById('checkoutModal').classList.add('active');
+            closeCartModal();
+        }
+
+        function closeCheckoutModal() {
+            document.getElementById('checkoutModal').classList.remove('active');
+        }
+
+        function submitCheckout(e) {
+            e.preventDefault();
+
+            const summary = generateOrderSummary();
+            document.getElementById('orderSummaryField').value = summary;
+
+            // Submit to Formspree
+            const formData = new FormData(document.getElementById('checkoutForm'));
+            formData.append('order_summary', summary);
+
+            fetch('https://formspree.io/f/xrevvrgo', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showSuccessPopup();
+                    clearCart();
+                    closeCheckoutModal();
+                    document.getElementById('checkoutForm').reset();
+                } else {
+                    alert('Error submitting order. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error submitting order. Please try again.');
+            });
+        }
+
+        // SUCCESS POPUP
+        function showSuccessPopup() {
+            const popup = document.getElementById('successPopup');
+            popup.classList.add('active');
+            setTimeout(() => {
+                popup.classList.remove('active');
+            }, 5000);
+        }
+
+        function closeSuccessPopup() {
+            document.getElementById('successPopup').classList.remove('active');
+        }
+
+        // WHATSAPP FUNCTIONS
+        function sendWhatsAppEnquiry(productId) {
+            const product = productsData.find(p => p.id === productId);
+            if (!product) return;
+
+            const message = `Hi STAR BATTERY, I am interested in ${product.name} (${product.brand}). Compatibility: ${product.vehicleCompatibility}. Please provide more details and pricing.`;
+            const whatsappUrl = `https://wa.me/917045902196?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // NOTIFICATIONS
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 1rem;
+                background: var(--success);
+                color: var(--secondary);
+                padding: 1rem 1.5rem;
+                border-radius: 8px;
+                box-shadow: var(--shadow);
+                z-index: 999;
+                animation: slideInUp 0.3s ease-out;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.style.animation = 'slideInUp 0.3s ease-out reverse';
+                setTimeout(() => notification.remove(), 300);
+            }, 2000);
+        }
+
+        // CLOSE MODALS ON BACKGROUND CLICK
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+
+        // KEYBOARD SHORTCUTS
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+            }
+        });
+
+        // INITIALIZE
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeFilters();
+            renderProducts();
+            updateCartUI();
+        });
+    </script>
+</body>
+</html>
